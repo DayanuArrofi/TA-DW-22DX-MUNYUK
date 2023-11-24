@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+    <style>
+        body
+        {
+            background-color: #9ADE7B;
+        }
+        header
+        {
+            background-color: #FEFAE0;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            top: 0;
+            position: sticky;
+            width: 100%;
+            z-index: 1;
+            border-bottom: 2px solid black;
+        }
+        header > .area_logo
+        {
+            width: 50%;
+            display: flex;
+            padding-left: 20px;
+        }
+        header > .area_menu
+        {
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            padding-right: 13px;   
+        }
+        header > .area_menu > a
+        {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            margin-right: 20px;
+        }
+        html
+        {
+        box-sizing: border-box;
+        }
+        *, *:before, *:after
+        {
+        box-sizing: inherit;
+        }
+        .kolom
+        {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+        }
+        .kartu
+        {
+        background-color: aqua;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+        }
+        .container
+        {
+        padding: 0 16px;
+        }
+        .container::after, .baris::after
+        {
+        content: "";
+        clear: both;
+        display: table;
+        }
+        .title
+        {
+        color: grey;
+        }
+        .button
+        {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 10px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        }
+        .button:hover
+        {
+        background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <section class="area_logo">
+            <img src="image/greenforestlpg.png" alt="Logo Green Forest" style="height: 100px;">
+        </section>
+            <nav class="area_menu">
+                <a href="">ABOUT US</a>
+                <a href="">HOME</a>
+            </nav>
+    </header>
+      <h2 style="text-align:center">GREEN FOREST LAMPUNG DEVELOPER</h2>
+      <div class="baris">
+        <div class="kolom">
+          <div class="kartu">
+            <img src="" alt="Dayanu Arrofi" style="width:100%">
+            <div class="container">
+              <h2>Dayanu Arrofi</h2>
+              <p class="title">LEADER</p>
+              <p>NPM : </p>
+              <p>dayanu_arrofi@teknokrat.ac.id</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="kolom">
+          <div class="kartu">
+            <img src="" alt="Huda Aulia" style="width:100%">
+            <div class="container">
+              <h2>Huda Aulia</h2>
+              <p class="title">MEMBER</p>
+              <p>NPM : </p>
+              <p>huda_aulia@teknokrat.ac.id</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>     
+        <div class="kolom">
+          <div class="kartu">
+            <img src="image/Astro-KTM.png" alt="Maulidan Akmal Gandi" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+            <div class="container">
+              <h2>Maulidan Akmal Gandi</h2>
+              <p class="title">MEMBER</p>
+              <p>NPM : 22312137</p>
+              <p>maulidan_akmal_gandi@teknokrat.ac.id</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
