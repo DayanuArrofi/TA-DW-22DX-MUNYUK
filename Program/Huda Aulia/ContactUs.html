@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+<style>
+        header
+        {
+            background-color: #FEFAE0;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            top: 0;
+            position: sticky;
+            width: 100%;
+            z-index: 1;
+        }
+
+        header > .area_logo
+        {
+            width: 50%;
+            display: flex;
+            padding-left: 20px;
+
+        }
+
+        header > .area_menu
+        {
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            padding-right: 13px;
+            
+        }
+        header > .area_menu > a
+        {
+            /*border: 1px solid #A51C30;*/
+            color: black;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        * 
+        {
+            box-sizing: border-box;
+              margin: 0;
+        }
+
+        body 
+        {
+            background: #557C55;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            height: 100vh;
+            margin: -20px 0 50px;
+            padding: 10px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            position: relative;
+            overflow: hidden;
+            width: 768px;
+            max-width: 100%;
+            min-height: 522px;
+            min-width: 370px;
+        }
+
+        .card-container
+        {
+            display: flex;
+        }
+
+        .left 
+        {
+            flex: 1;
+            height: 480px;
+            background-color: #557C55;
+        }
+
+        .right 
+        {
+            display: flex;
+            flex: 1;
+            height: 460px;
+            background-color: #ffffff;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left 
+        {
+            display: flex;
+            flex: 1;
+            height: 522px;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+
+        .left-container 
+        {
+            height: 50%;
+            width: 80%;
+            text-align: center;
+            line-height: 22px
+        }
+
+        .left p 
+        {
+            font-size: 0.9rem;
+        }
+
+        h2 
+        {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .right-container 
+        {
+            width: 70%;
+            height: 80%;
+            text-align: center;
+        }
+
+        input, textarea 
+        {
+            background-color: #eee;
+            border: none;
+            padding: 12px 15px;
+            margin: 8px 0;
+            width: 100%;
+            font-size: 0.8rem;
+        }
+
+        input:focus, textarea:focus 
+        {
+            outline: 1px solid #557C55;
+        }
+
+        button 
+        {
+            border-radius: 20px;
+            border: 1px solid #557C55;
+            background-color: #557C55;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 12px 45px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-out;
+            cursor: pointer;
+        }
+
+        button:hover 
+        {
+            opacity: 0.7;
+        }
+
+        textarea 
+        {
+            height: 90px;
+        }
+
+        @media only screen and (max-width: 600px)
+        {
+            .left {
+                display: none;
+            }
+
+            .lg-view {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 600px) 
+        {
+            .sm-view {
+                display: none;
+            }
+        }
+
+
+</style>
+
+</head>
+<body>
+    <header>
+        <section class="area_logo">
+            <img src="asset/greenforestlpg.png" alt="Logo Green Forest" style="height: 100px;">
+        </section>
+            <nav class="area_menu">
+                <a href="">ABOUT US</a>
+                <a href="">CONTACT US</a>
+            </nav>
+    </header>
+    <div class="container">
+
+        <div class="card-container">
+            <div class="left">
+                <div class="left-container">
+                    <h2>Tentang Kami</h2>
+                    <p>Mandan Koding adalah channel berbagi tutorial seputar pemograman.</p>
+                    <br>
+                    <p>Bantu kami dengan men Subscribe, Like dan Share</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-container">
+                    <form action="">
+                        <h2 class="lg-view">Hubungi Kami</h2>
+                        <h2 class="sm-view">Hubungi Kami</h2>
+                        <input type="text" placeholder="Nama">
+                        <input type="email" placeholder="Alamat Email">
+                        <input type="text" placeholder="Perusahaan" autocomplete="off">
+                        <input type="phone" placeholder="Telepone" autocomplete="off">
+                        <textarea rows="10" placeholder="Pesan"></textarea>
+                        <button>Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        copyright
+    </footer>
+</body>
+</html>
