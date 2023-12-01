@@ -12,7 +12,8 @@
             margin: 0;
         }
         header{
-            background-color: #FEFAE0;
+            background-color: rgb(56, 95, 56);
+            /* background-color: #FEFAE0; */
             min-height: 100px;
             display: flex;
             align-items: center;
@@ -35,19 +36,20 @@
         }
         header > .area_menu > a
         {
-            color: black;
+            color: white;
             text-decoration: none;
             margin-right: 20px;
             font-size: 20px;
         }
         header > .area_menu > a:hover{
-            color: rgb(21, 136, 21);
+            color:rgb(193, 188, 188);
         }
         header > .area_menu > a::after{
             content: '';
             display: block;
             padding-bottom: 2px;
-            border-bottom: 2px solid rgb(21, 136, 21);
+            border-bottom: 2px solid rgb(193, 188, 188);
+            /* border-bottom: 2px solid rgb(21, 136, 21); */
             transform: scaleX(0);
         }
         header > .area_menu > a:hover::after{
@@ -59,10 +61,71 @@
             min-height: 100px;
         }
 
-        .content > .tagline{
+        .slideshow {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
             width: 100%;
-            min-height: 100px;
-            display: flex;
+            text-align: center;
+        }
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity:1}
+        }
+        @media only screen and (max-width: 300px) {
+            .prev, .next,.text {font-size:11px}
         }
 
         .content > .wellcome{
@@ -88,8 +151,8 @@
         }
         footer{
             width: 100%;
-            min-height: 100PX;
-            background-color: #FEFAE0;
+            min-height: 50PX;
+            background-color: rgb(70, 129, 70);
         }
 
 
@@ -107,9 +170,32 @@
             </nav>
     </header>
     <main class="content">
-        <section class="tagline">
-            <img src="" alt="Tagline Awal">
-        </section>
+        <section class="slideshow">
+
+            <section class="mySlides fade">
+              <img src="aset/HutanPinusSumberJaya.png" style="width:100%">
+            </section>
+            
+            <section class="mySlides fade">
+              <img src="aset/PinusZone235.png" style="width:100%">
+            </section>
+            
+            <section class="mySlides fade">
+              <img src="aset/TahuraWAR.png" style="width:100%">
+            </section>
+            
+            <a class="prev" onclick="plusSlides(-1)"> < </a>
+            <a class="next" onclick="plusSlides(1)"> > </a>
+            
+            </section>
+            <br>
+            
+            <section style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </section>
+            
            <section class="wellcome">
             <img src="aset/greenforestlpg.png" alt="Green Forest" style="height: 80px;">
            </section>
@@ -130,6 +216,33 @@
         <footer>
             copyright
         </footer>
-    
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
 </body>
 </html>
