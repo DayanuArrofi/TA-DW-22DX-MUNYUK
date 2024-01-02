@@ -13,7 +13,6 @@
         }
         header{
             background-color: rgb(56, 95, 56);
-            /* background-color: #FEFAE0; */
             min-height: 100px;
             display: flex;
             align-items: center;
@@ -49,7 +48,6 @@
             display: block;
             padding-bottom: 2px;
             border-bottom: 2px solid rgb(193, 188, 188);
-            /* border-bottom: 2px solid rgb(21, 136, 21); */
             transform: scaleX(0);
         }
         header > .area_menu > a:hover::after{
@@ -62,7 +60,7 @@
         }
 
         .slideshow {
-            max-width: 1000px;
+            max-width: 100%;
             position: relative;
             margin: auto;
         }
@@ -103,27 +101,7 @@
             position: absolute;
             top: 0;
         }
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-        .active, .dot:hover {
-            background-color: #717171;
-        }
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-        @keyframes fade {
-            from {opacity: .4} 
-            to {opacity:1}
-        }
+
         @media only screen and (max-width: 300px) {
             .prev, .next,.text {font-size:11px}
         }
@@ -172,15 +150,15 @@
     <main class="content">
         <section class="slideshow">
 
-            <section class="mySlides fade">
+            <section class="mySlides">
               <img src="aset/HutanPinusSumberJaya.png" style="width:100%">
             </section>
             
-            <section class="mySlides fade">
+            <section class="mySlides">
               <img src="aset/PinusZone235.png" style="width:100%">
             </section>
             
-            <section class="mySlides fade">
+            <section class="mySlides">
               <img src="aset/TahuraWAR.png" style="width:100%">
             </section>
             
@@ -190,18 +168,10 @@
             </section>
             <br>
             
-            <section style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <span class="dot" onclick="currentSlide(3)"></span> 
-            </section>
-            
            <section class="wellcome">
             <img src="aset/greenforestlpg.png" alt="Green Forest" style="height: 80px;">
            </section>
-           <section class="tag">
-            - Wellcome to Green Forest Lampung -
-           </section>
+           <section class="tag">- Wellcome to Green Forest Lampung -</section>
         <section class="article">
             <section>
                 <img src="" alt="artikel1">
@@ -214,8 +184,9 @@
                 </section>
         </section>
         <footer>
-            copyright
+            &copy; MUNTUK 2023
         </footer>
+        
         <script>
             let slideIndex = 1;
             showSlides(slideIndex);
@@ -231,17 +202,12 @@
             function showSlides(n) {
               let i;
               let slides = document.getElementsByClassName("mySlides");
-              let dots = document.getElementsByClassName("dot");
               if (n > slides.length) {slideIndex = 1}    
               if (n < 1) {slideIndex = slides.length}
               for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";  
               }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
               slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
             }
             </script>
 </body>
