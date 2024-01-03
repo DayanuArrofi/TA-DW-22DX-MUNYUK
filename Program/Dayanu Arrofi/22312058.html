@@ -35,6 +35,7 @@
         }
         header > .area_menu > a
         {
+            font-family: 'Josefin Sans';
             color: white;
             text-decoration: none;
             margin-right: 20px;
@@ -57,77 +58,53 @@
 
         .content{
             min-height: 100px;
+            margin: 0;
+            padding: 0;
         }
 
-        .slideshow {
-            max-width: 100%;
-            position: relative;
-            margin: auto;
+        .frame{
+            width:1519px ;
+            transform: translate(0%, -5%);
+            overflow: hidden;
+            background-color: blue;
         }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-        .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
+        .slide{
             width: 100%;
-            text-align: center;
-        }
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-
-        @media only screen and (max-width: 300px) {
-            .prev, .next,.text {font-size:11px}
-        }
-
-        .content > .wellcome{
-            min-height: 100px;
-            width: 100%;
+            animation: animasi 18s infinite;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Josefin Sans', sans-serif;
+            margin: 0;
         }
-        .content > .tag{
+
+        @keyframes animasi{
+            0%{transform: translateX(0);}
+            10%{transform: translateX(0);}
+            20%{transform: translateX(0);}
+            30%{transform: translateX(-100%);}
+            40%{transform: translateX(-100%);}
+            50%{transform: translateX(-100%);}
+            60%{transform: translateX(-100%);}
+            70%{transform: translateX(-100%);}
+            80%{transform: translateX(0);}
+            90%{transform: translateX(0);}
+            100%{transform: translateX(0);}
+        }
+            
+        .tag{
             align-items: center;
             justify-content: center;
             display: flex;
             font-size: 25px;
+            font-family: 'Josefin Sans', sans-serif;
         }
 
-        .content > .article{
+        .article{
             display: flex;
             width: 100%;
             justify-content: center;
             margin-top: 20px;
         }
         footer{
+            display: flex;
             width: 100%;
             min-height: 50PX;
             background-color: rgb(70, 129, 70);
@@ -147,68 +124,33 @@
                 <a href=""> WEB DEVELOPER</a>
             </nav>
     </header>
-    <main class="content">
-        <section class="slideshow">
-
-            <section class="mySlides">
-              <img src="aset/HutanPinusSumberJaya.png" style="width:100%">
-            </section>
+    <section class="content">
+        <section class="frame">
+            <section class="slide">
+                  <img style="width:1519px ; height: 800px;" src="aset/PinusZone235.png" alt="">
+                  <img style="width:1520px ; height: 800px;" src="aset/HutanPinusSumberJaya.png" alt="">
+             </section>
+         </section>
+                
             
-            <section class="mySlides">
-              <img src="aset/PinusZone235.png" style="width:100%">
-            </section>
-            
-            <section class="mySlides">
-              <img src="aset/TahuraWAR.png" style="width:100%">
-            </section>
-            
-            <a class="prev" onclick="plusSlides(-1)"> < </a>
-            <a class="next" onclick="plusSlides(1)"> > </a>
-            
-            </section>
-            <br>
-            
-           <section class="wellcome">
-            <img src="aset/greenforestlpg.png" alt="Green Forest" style="height: 80px;">
-           </section>
-           <section class="tag">- Wellcome to Green Forest Lampung -</section>
+        <section class="tag">- Wellcome to Green Forest Lampung -</section>
+           
         <section class="article">
-            <section>
-                <img src="" alt="artikel1">
+                <section>
+                   <img src="" alt="artikel1">
+                    </section>
+                <section>
+                 <img src="" alt="artikel2">
                 </section>
-            <section>
-                <img src="" alt="artikel2">
-                </section>
-            <section>
+              <section>
                 <img src="" alt="artikel3">
                 </section>
         </section>
+    </section>
         <footer>
-            &copy; MUNTUK 2023
+            &copy; MUNYUK 2023
         </footer>
         
-        <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              let i;
-              let slides = document.getElementsByClassName("mySlides");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-              }
-              slides[slideIndex-1].style.display = "block";  
-            }
-            </script>
+  
 </body>
 </html>
