@@ -67,7 +67,6 @@
             width:1519px ;
             top: 0;
             overflow: hidden;
-            background-color: blue;
             display: flex;
         }
         .slide{
@@ -99,12 +98,73 @@
             font-size: 30px;
             font-family: 'Josefin Sans', sans-serif;
         }
-
-        .article{
+        .tag2{
+            align-items: center;
+            margin-left: 29%;
             display: flex;
-            width: 100%;
-            justify-content: center;
+            font-size: 30px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .article
+        {
+            margin-bottom: 30px;
+            font-size: 20px;
+            z-index: 1;
+            height: auto;
+            display: flex;
+        }
+
+        .article > .area_img
+        {
             margin-top: 20px;
+            display: flex;
+            align-items: center;
+            margin-left: 28.5%;
+        }
+
+        .article > .area_img > .frame_img
+        {
+            display: flex;
+            margin: 10px;
+            width: 190px;
+            height: 230px; 
+            cursor: pointer;
+            border-radius: 7px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .article > .area_img > .frame_img > .img
+        {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            transition: 0.5s ease;
+            display: flex;
+        }
+
+        .article > .area_img > .frame_img > .img:hover
+        {
+            transform: scale(1.2);
+        }
+
+        .article > .area_img > .frame_img > .label
+        {
+            color: #FFFFFF;
+            font-size: 14px;
+            padding: 5px;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            transform: translateY(100%);
+            transition: 0.4s ease;
+        }
+
+        .article > .area_img > .frame_img:hover > .label
+        {
+            transform: translateY(0%);
         }
         footer{
             display: flex;
@@ -130,24 +190,32 @@
     <section class="content">
         <section class="frame">
             <section class="slide">
-                  <img style="width:1519px ; height: 800px;" src="aset/slide1.png" alt="">
-                  <img style="width:1520px ; height: 800px;" src="aset/slide2.png" alt="">
+                  <img style="width:1519px ; height: 800px; display: flex;" src="aset/slide1.png" alt="">
+                  <img style="width:1520px ; height: 800px; display: flex;" src="aset/slide2.jpg" alt="">
              </section>
          </section>
                 
             
         <section class="tag">- Wellcome to Green Forest Lampung -</section>
-           
+        <section class="tag2">Destinasi Wisata</section>
         <section class="article">
-                <section>
-                   <img src="" alt="artikel1">
-                    </section>
-                <section>
-                 <img src="" alt="artikel2">
+            <section class="area_img">
+                <section class="frame_img">
+                <img src="aset/slide1.png" alt="" class="img" style="display: flex;">
+                <div class="label">Tahura War</div>
                 </section>
-              <section>
-                <img src="" alt="artikel3">
+
+                <section class="frame_img">
+                <img src="aset/slide2.jpg" alt="" class="img" style="display: flex;>
+                <div class="label">Hutan Pinus Sumber Jaya</div>
                 </section>
+
+                <section class="frame_img">
+                <img src="aset/slide1.png" alt="" class="img" style="display: flex;>
+                <div class="label">Hutan Pinus Area 235</div>
+                </section>
+
+            </section>
         </section>
     </section>
         <footer>
