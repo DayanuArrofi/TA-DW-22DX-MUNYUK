@@ -127,7 +127,7 @@
             display: flex;
         }
 
-        .area_img > .frame_img
+        .frame_img
         {
             display: flex;
             margin: 10px;
@@ -139,7 +139,7 @@
             position: relative;
         }
 
-        .area_img > .frame_img > .img
+        .img
         {
             width: 100%;
             height: 100%;
@@ -148,12 +148,12 @@
             display: flex;
         }
 
-        .area_img > .frame_img > .img:hover
+        .img:hover
         {
             transform: scale(1.2);
         }
 
-        .area_img > .frame_img > .label
+        .frame_img > .label
         {
             color: #FFFFFF;
             font-size: 14px;
@@ -167,7 +167,7 @@
             transition: 0.4s ease;
         }
 
-        .area_img > .frame_img:hover > .label
+        .frame_img:hover > .label
         {
             transform: translateY(0%);
         }
@@ -211,17 +211,25 @@
         
             <section class="area_img">
                 <section class="frame_img">
-                <img src="aset/slide1.png" alt="" class="img">
+                    <a href="https://www.google.com">
+                        <img src="aset/slide1.png" alt="" class="img">
+                    </a>
                 <div class="label">Tahura War</div>
                 </section>
+                
+               
 
                 <section class="frame_img">
-                <img src="aset/slide2.jpg" alt="" class="img">
+                    <a href="https://www.google.com">
+                        <img src="aset/slide2.jpg" alt="" class="img">
+                    </a>
                 <div class="label">Hutan Pinus Sumber Jaya</div>
                 </section>
 
                 <section class="frame_img">
-                <img src="aset/slide1.png" alt="" class="img">
+                    <a href="https://www.google.com">
+                        <img src="aset/slide1.png" alt="" class="img">
+                    </a>
                 <div class="label">Hutan Pinus Area 235</div>
                 </section>
 
