@@ -14,9 +14,11 @@
         }
         body{
             font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(238, 238, 238);
         }
         header{
-            background-color: rgb(0,0,0,0.5);
+            margin-top: 0;
+            background-color: rgb(43, 66, 43);
             min-height: 100px;
             display: flex;
             align-items: center;
@@ -61,8 +63,11 @@
             transition: 0.2s linear;
         }
         .area_artikel{
-            width: 900px;
+            width: 1050px;
             margin: 30px auto;
+            box-shadow: 2px 2px 3px rgb(151, 148, 148);
+            padding: 20px;
+            background-color: white;
         }
         article img{
             width: 300px;
@@ -75,13 +80,17 @@
         .clear{
             clear: left;
         }
-        hr{
-            border: 1px solid black;
-            margin-top: 10px;
-        }
         article p{
             line-height: 28px;
             text-align: justify;
+        }
+        footer{
+            display: flex;
+            background-color: rgb(43, 66, 43);
+            min-height: 70px;
+            color: rgb(204, 198, 198);
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -132,7 +141,6 @@
             </p>
         </article>
         <div class="clear"></div>
-        <hr>
         <article>
             <h2>Objek Wisata Taman Hutan Raya Wan Abdul Rahman</h2>
             <img src="image/Tahura-1.jpg" alt="">
@@ -141,7 +149,6 @@
             </p>
         </article>
         <div class="clear"></div>
-        <hr>
         <article>
             <h2>Air Terjun Sinar Tiga</h2>
             <img src="image/Tahura-SinarTiga.jpg" alt="">
@@ -151,7 +158,6 @@
             </p>
         </article>
         <div class="clear"></div>
-        <hr>
         <article>
             <h2>Air Terjun Talang Rabun</h2>
             <img src="image/Tahura-TalangRabun.jpg" alt="">
@@ -161,7 +167,6 @@
             </p>
         </article>
         <div class="clear"></div>
-        <hr>
         <article>
             <h2>Air Terjun Tanah Longsor</h2>
             <img src="image/Tahura-TanahLongsor.jpg" alt="">
@@ -170,7 +175,9 @@
             </p>
         </article>
         <div class="clear"></div>
-        <hr>
     </section>
+    <footer>
+        Copyright &copy; 2024 The Munyuk Team
+    </footer>
 </body>
 </html>
