@@ -6,14 +6,19 @@
     <title>Web Development</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Josefin+Sans:wght@500&family=Montserrat:wght@300&family=Open+Sans&family=Vina+Sans&display=swap');
-        body
-        {
-          margin: 0;
-            /* background-color: #9ADE7B; */
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
         }
-        header
-        {
-            background-color: rgb(0,0,0,0.5);
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(238, 238, 238);
+        }
+        header{
+            margin-top: 0;
+            width: 100%;
+            background-color:  rgb(43, 66, 43);
             min-height: 100px;
             display: flex;
             align-items: center;
@@ -33,7 +38,7 @@
             width: 50%;
             display: flex;
             justify-content: end;
-            padding-right: 13px; 
+            padding-right: 13px;   
         }
         header > .area_menu > a
         {
@@ -41,7 +46,7 @@
             color: white;
             text-decoration: none;
             margin-right: 20px;
-            font-size: 20px;;
+            font-size: 20px;
         }
         header > .area_menu > a:hover{
             color:rgb(193, 188, 188);
@@ -109,7 +114,43 @@
         {
         background-color: #555;
         }
-
+        footer{
+            display: flex;
+            background-color: rgb(43, 66, 43);
+            min-height: 80px;
+            color: rgb(204, 198, 198);
+            align-items: center;
+            justify-content: center;
+        }
+        @media(max-width: 768px){
+          .kolom{
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+          }
+          .kartu{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #f1f1f1;
+          }
+          .button{
+            margin-top: 10px;
+          }
+          .container{
+            margin-top: 10px;
+          }
+        }
+        @media(max-width: 420px){
+          header > .area_menu > a
+          {
+            font-family: 'Josefin Sans';
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 15px;
+          }
+        }
     </style>
 </head>
 <body>
@@ -118,11 +159,11 @@
             <img src="image/greenforestlpg.png" alt="Logo Green Forest" style="height: 100px;">
         </section>
             <nav class="area_menu">
-                <a href="">ABOUT US</a>
+                <a href="">CONTACT US</a>
                 <a href="">HOME</a>
             </nav>
     </header>
-      <h2 style="text-align:center">GREEN FOREST LAMPUNG DEVELOPER CARD NAME</h2>
+      <h2 style="text-align:center; margin-bottom: 10px; margin-top: 10px;">GREEN FOREST LAMPUNG DEVELOPER CARD NAME</h2>
       <div class="baris">
         <div class="kolom">
           <div class="kartu">
@@ -161,6 +202,8 @@
           </div>
         </div>
       </div>
-      
+      <footer>
+        Copyright &copy; 2024 The Munyuk Team
+      </footer>
 </body>
 </html>
