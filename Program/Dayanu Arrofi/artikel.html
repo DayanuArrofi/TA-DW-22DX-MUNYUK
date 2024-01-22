@@ -81,7 +81,6 @@
             margin-top: 30px;
             max-width: 100%;
             height: auto;
-            background-color: blue;
         }
         .list{
             margin-left: 15px;
@@ -102,9 +101,14 @@
         @media(max-width: 768px){
             header > .area_logo{
                 width: 20%;
+                padding: 10px;
             }
             header > .area_menu{
                 width: 80%;
+            }
+            header > .area_menu > a{
+                font-size: 12px;
+                margin: 5px;
             }
             .area_artikel{
                 width: 43.75rem;
@@ -115,6 +119,12 @@
         }
         /* responsive untuk handphone 420px */
         @media(max-width: 420px){
+            header > .area_logo{
+                width: 20%;
+            }
+            header > .area_menu{
+                width: 80%;
+            }
             .area_artikel{
                 width: 21.7rem;
             }
