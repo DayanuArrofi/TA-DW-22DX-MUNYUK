@@ -8,10 +8,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Josefin+Sans:wght@500&family=Montserrat:wght@300&family=Open+Sans&family=Vina+Sans&display=swap');
         *
-        {
-          margin: 0;
-          padding: 0;
-            /* background-color: #9ADE7B; */
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
         }
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -19,7 +19,8 @@
         }
         header{
             margin-top: 0;
-            background-color: rgb(43, 66, 43);
+            width: 100%;
+            background-color:  rgb(43, 66, 43);
             min-height: 100px;
             display: flex;
             align-items: center;
@@ -101,6 +102,14 @@
                 width: 43.75rem;
                 margin: 20px auto;
             }
+            header > .area_menu
+            {
+                width: 250%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                padding-right: 5px; 
+            }
         }
         @media (max-width: 420px){
             header{
@@ -115,19 +124,26 @@
                 float: left;
                 margin: 10px 20px 0 0;
             }
+            header > .area_menu > a{
+                font-family: 'Josefin Sans';
+                color: white;
+                text-decoration: none;
+                margin-right: 20px;
+                font-size: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <section class="area_logo">
-            <img src="image/greenforestlpg.png" alt="Logo Green Forest" style="height: 100px;">
+            <img src="image/greenforestlpg.png" alt="Logo Green Forest" style="width: 120px;">
         </section>
-            <nav class="area_menu">
-                <a href="">HOME</a>
-                <a href="">ABOUT US</a>
-                <a href=""> WEB DEVELOPER</a>
-            </nav>
+        <nav class="area_menu">
+            <a href="">HOME</a>
+            <a href="">ABOUT US</a>
+            <a href=""> WEB DEVELOPER</a>
+        </nav>
     </header>
 
     <section class="area_artikel">
