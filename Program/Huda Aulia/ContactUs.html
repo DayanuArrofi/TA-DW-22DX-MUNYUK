@@ -5,40 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContactUs</title>
 <style>
-        header
-        {
-            background-color: #FEFAE0;
+        header{
+            background-color:  rgb(43, 66, 43);
             min-height: 100px;
             display: flex;
             align-items: center;
-            top: 0;
             position: sticky;
-            width: 100%;
+            width: 100%;kn
             z-index: 1;
+            border:0.5px solid #000000;
         }
-
         header > .area_logo
         {
             width: 50%;
             display: flex;
-            padding-left: 20px;
-
+            padding-left: 30px;
         }
-
         header > .area_menu
         {
             width: 50%;
             display: flex;
             justify-content: end;
-            padding-right: 13px;
-            
+            padding-right: 13px;  
         }
         header > .area_menu > a
         {
-            /*border: 1px solid #A51C30;*/
-            color: black;
+            font-family: 'Josefin Sans';
+            color: white;
             text-decoration: none;
             margin-right: 20px;
+            font-size: 20px;
+        }
+        header > .area_menu > a:hover{
+            color:rgb(193, 188, 188);
+        }
+        header > .area_menu > a::after{
+            content: '';
+            display: block;
+            padding-bottom: 2px;
+            border-bottom: 2px solid rgb(193, 188, 188);
+            transform: scaleX(0);
+        }
+        header > .area_menu > a:hover::after{
+            transform: scaleX(0.5);
+            transition: 0.2s linear;
         }
 
         * 
@@ -56,9 +66,7 @@
             flex-direction: column;
             font-family: "Montserrat", sans-serif;
             font-size: 10px;
-            height: 100vh;
-            margin: -20px 0 50px;
-            padding: 10px;
+            height: auto;
         }
 
         .container {
@@ -189,6 +197,15 @@
                 display: none;
             }
         }
+        footer{
+            display: flex;
+            width: 100%;
+            min-height: 70PX;
+            background-color: rgb(43, 66, 43);
+            color: rgb(204, 198, 198);
+            align-items: center;
+            justify-content: center;
+        }
 
 
 </style>
@@ -197,7 +214,7 @@
 <body>
     <header>
         <section class="area_logo">
-            <img src="asset/greenforestlpg.png" alt="Logo Green Forest" style="height: 100px;">
+            <img src="asset/LogoPutih.png" alt="Logo Green Forest" style="height: 100px;">
         </section>
             <nav class="area_menu">
                 <a href="">ABOUT US</a>
@@ -233,7 +250,7 @@
 
     </div>
     <footer>
-        copyright
+        Copyright &copy; 2024 The Munyuk Team
     </footer>
 </body>
 </html>
